@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">News by Category</string>
+    <string name="sign_in">Sign In</string>
+    <string name="reset">Reset</string>
+    <string name="email_hint">Enter email address</string>
+    <string name="pass_hint">Enter a password</string>
+    <string name="forgot">Forgot Password?</string>
+    <string name="Log_in">Log in</string>
+    <string name="have_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="name_hint">Enter a name</string>
+    <string name="register">Зарегистрируйтесь</string>
+    <string name="categories">Categories</string>
+    <string name="sources">Sources</string>
+    <string name="bookmarks">Bookmarks</string>
+    <string name="account">Account</string>
+    <string name="find_hint">Find sources</string>
+    <string name="news_hint">Search for news</string>
+    <string name="news_by_category">News by category</string>
+    <string name="news_by_sources">News by sources</string>
+    <string name="sport">Sport</string>
+    <string name="general">General</string>
+    <string name="business">Business</string>
+    <string name="science">Science</string>
+    <string name="technology">Technology</string>
+    <string name="entertainment">Entertainment</string>
+    <string name="health">Health</string>
+    <string name="exit">Выйти</string>
+    <string name="email">Email</string>
+    <string name="enter_exists">Вы вошли в аккаунт</string>
+    <string name="hot_news">Hot News</string>
+    <string name="registr">Регистрация</string>
+    <string name="password">Password</string>
+    <string name="enter">Подтвердите</string>
+    <string name="Enter">Войти</string>
+    <string name="voidite">Войдите в аккаунт для продолжения</string>
+    <string name="havent">Нет аккаунта?</string>
+
+</resources>

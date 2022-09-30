@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@+id/authorizationFragment">
+
+    <navigation android:id="@+id/navigation2"
+        app:startDestination="@id/categoryFragment">
+        <fragment
+            android:id="@+id/categoryFragment"
+            android:name="com.jamascrorp.testproject.presentation.FragmentCategory.CategoryFragment"
+            android:label="News by Category"
+            tools:layout="@layout/fragment_category">
+            <action
+                android:id="@+id/action_categoryFragment_to_webViewFragment"
+                app:destination="@id/webViewFragment2" />
+            <action
+                android:id="@+id/action_categoryFragment_to_categoryNewsFragment"
+                app:destination="@id/categoryNewsFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/categoryNewsFragment"
+            android:name="com.jamascrorp.testproject.presentation.FragmentCategoryNews.CategoryNewsFragment"
+            android:label="News by Category"
+            tools:layout="@layout/fragment_category_news">
+            <argument
+                android:name="args"
+                app:argType="string"
+                app:nullable="true"
+                android:defaultValue="null" />
+            <action
+                android:id="@+id/action_categoryNewsFragment_to_webViewFragment"
+                app:destination="@id/webViewFragment2" />
+            <argument
+                android:name="args1"
+                app:argType="string"
+                app:nullable="true"
+                android:defaultValue="null" />
+        </fragment>
+        <fragment
+            android:id="@+id/webViewFragment2"
+            android:name="com.jamascrorp.testproject.presentation.WebView.WebViewFragment">
+            <argument
+                android:name="args"
+                app:argType="string" />
+            <argument
+                android:name="model"
+                android:defaultValue="@null"
+                app:argType="com.jamascrorp.testproject.data.network.Model1"
+                app:nullable="true" />
+            <action
+                android:id="@+id/action_webViewFragment_to_bookmarksFragment"
+                app:destination="@id/navigation" />
+        </fragment>
+    </navigation>
+    <navigation android:id="@+id/navigation3"
+        app:startDestination="@id/sourcesFragment">
+        <fragment
+            android:id="@+id/sourcesFragment"
+            android:name="com.jamascrorp.testproject.presentation.FragmentSources.SourcesFragment"
+            android:label="News by Sources"
+            tools:layout="@layout/fragment_sources">
+            <action
+                android:id="@+id/action_sourcesFragment_to_categoryNewsFragment"
+                app:destination="@id/categoryNewsFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/webViewFragment2"
+            android:name="com.jamascrorp.testproject.presentation.WebView.WebViewFragment"
+            android:label="source">
+            <argument
+                android:name="args"
+                app:argType="string" />
+            <argument
+                android:name="model"
+                android:defaultValue="@null"
+                app:argType="com.jamascrorp.testproject.data.network.Model1"
+                app:nullable="true" />
+            <action
+                android:id="@+id/action_webViewFragment_to_bookmarksFragment"
+                app:destination="@id/navigation" />
+        </fragment>
+        <fragment
+            android:id="@+id/categoryNewsFragment"
+            android:name="com.jamascrorp.testproject.presentation.FragmentCategoryNews.CategoryNewsFragment"
+            android:label="News by Category"
+            tools:layout="@layout/fragment_category_news">
+            <argument
+                android:name="args"
+                app:argType="string"
+                app:nullable="true"
+                android:defaultValue="null" />
+            <action
+                android:id="@+id/action_categoryNewsFragment_to_webViewFragment"
+                app:destination="@id/webViewFragment2" />
+            <argument
+                android:name="args1"
+                app:argType="string"
+                app:nullable="true"
+                android:defaultValue="null" />
+        </fragment>
+    </navigation>
+        <fragment
+            android:id="@+id/fragment"
+            android:name="com.jamascrorp.testproject.presentation.Fragment"
+            android:label="Fragment">
+            <action
+                android:id="@+id/action_fragment_to_authorizationFragment"
+                app:destination="@id/authorizationFragment" />
+            <action
+                android:id="@+id/action_fragment_to_categoryFragment"
+                app:destination="@id/navigation2" />
+        </fragment>
+        <fragment
+            android:id="@+id/accountFragment"
+            android:name="com.jamascrorp.testproject.presentation.FragmentAccount.CreateProfileFragment"
+            android:label="AccountFragment">
+            <action
+                android:id="@+id/action_accountFragment_to_categoryFragment"
+                app:destination="@id/navigation2" />
+        </fragment>
+        <fragment
+            android:id="@+id/authorizationFragment"
+            android:name="com.jamascrorp.testproject.presentation.FragmentAuthorization.AuthorizationFragment"
+            android:label="fragment_authorization"
+            tools:layout="@layout/fragment_authorization">
+            <action
+                android:id="@+id/action_authorizationFragment_to_categoryFragment"
+                app:destination="@id/navigation2" />
+            <action
+                android:id="@+id/action_authorizationFragment_to_accountFragment"
+                app:destination="@id/accountFragment" />
+            <action
+                android:id="@+id/action_authorizationFragment_to_fragment"
+                app:destination="@id/fragment" />
+        </fragment>
+    <navigation android:id="@+id/navigation"
+        app:startDestination="@id/bookmarksFragment">
+        <fragment
+            android:id="@+id/bookmarksFragment"
+            android:name="com.jamascrorp.testproject.presentation.FragmentBookmarks.BookmarksFragment"
+            android:label="Bookmarks"
+            tools:layout="@layout/fragment_bookmarks">
+            <argument
+                android:name="Model"
+                app:argType="com.jamascrorp.testproject.data.network.Model1" />
+            <action
+                android:id="@+id/action_bookmarksFragment_to_webViewFragment1"
+                app:destination="@id/webViewFragment1" />
+        </fragment>
+        <fragment
+            android:id="@+id/webViewFragment1"
+            android:name="com.jamascrorp.testproject.presentation.WebView.WebViewFragment">
+            <argument
+                android:name="args"
+                app:argType="string" />
+            <argument
+                android:name="model"
+                android:defaultValue="@null"
+                app:argType="com.jamascrorp.testproject.data.network.Model1"
+                app:nullable="true" />
+            <action
+                android:id="@+id/action_webViewFragment_to_bookmarksFragment"
+                app:destination="@id/bookmarksFragment" />
+        </fragment>
+    </navigation>
+</navigation>

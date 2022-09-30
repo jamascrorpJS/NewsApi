@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation2"
+        android:icon="@mipmap/home"
+        android:title="@string/categories"/>
+
+    <item
+        android:id="@+id/navigation3"
+        android:icon="@mipmap/all_inbox"
+        android:title="@string/sources"/>
+
+    <item
+        android:id="@+id/navigation"
+        android:icon="@mipmap/bookmark_border"
+        android:title="@string/bookmarks"/>
+
+    <item
+        android:id="@+id/fragment"
+        android:icon="@mipmap/person"
+        android:title="@string/account"/>
+</menu>
